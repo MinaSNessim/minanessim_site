@@ -1,0 +1,180 @@
+{% load static %}
+<!-- ======= Footer ======= -->
+<head></head>
+
+<footer id="footer">
+<div class="footer-newsletter">
+	<div class="container">
+		<div class="row ">
+			<div class="col-lg-6 col-md-6 mb-4">
+					<h4>Subscribe to Newsletter</h4>
+					<p>Subscribe to get latest news and updates</p>
+
+                    <form action="{% url 'handle_subscription' %}" method="post" class="container" name="subscribe_form">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            {{ subscriber_form.email }}
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary btn-block btn-radius-right"
+										style="border-top-right-radius: 15px; border-bottom-right-radius: 15px;
+										border-top-left-radius: 0; border-bottom-left-radius: 0;background: #47b2e4;
+										border: 0;">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+				</div>
+			<div class="col-lg-4 col-md-6 footer-links">
+				<h3>Follow on Social Media</h3>
+				<div class="social-links mt-3">
+					<div class="row footer-links" >
+						<div class="col-lg-4">
+							<ul>
+								<li>
+									<a href="https://www.youtube.com/@minanessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+										<img src="{% static 'img/sm/youtube.png' %}" alt="YouTube" style="width: 40px; height: 40px;">
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/MinaMsnessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+										<img src="{% static 'img/sm/twitter.png' %}" alt="Twitter" style="width: 40px; height: 40px;">
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-4">
+							<ul>
+								<li>
+									<a href="https://github.com/MinaSNessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+										<img src="{% static 'img/sm/github.png' %}" alt="GitHub" style="width: 45px; height: 45px;">
+									</a>
+								</li>
+								<li>
+									<a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+										<img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-4">
+							<ul>
+								<li>
+									<a href="https://www.upwork.com/freelancers/~010b5754c5b4ea1407" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+										<img src="{% static 'img/sm/upwork.png' %}" alt="Upwork" style="width: 40px; height: 40px;">
+									</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+										<img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--
+<div class="footer-top">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 footer-contact">
+				<h3>Mina Nessim</h3>
+				<p>
+				  <strong>Location:</strong>  Dubai, UAE <br>
+				  <strong>Email:</strong> info@example.com<br>
+				</p>
+			  </div>
+		<div class="col-lg-4 col-md-6 footer-links">
+				<h4>Useful Links</h4>
+				<ul>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+				</ul>
+			  </div>
+			<div class="col-lg-4 col-md-6 footer-links">
+				<h4>Our Services</h4>
+				<ul>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+				  <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+
+				</ul>
+			  </div>
+			<div class="col-lg-4 col-md-6 footer-links">
+						<h3>Follow on Social Media</h3>
+						<div class="social-links mt-3">
+							<div class="row">
+								<div class="col-lg-4">
+									<ul>
+										<li>
+											<a href="https://www.youtube.com/@minanessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+												<img src="{% static 'img/sm/youtube.png' %}" alt="YouTube" style="width: 40px; height: 40px;">
+											</a>
+										</li>
+										<li>
+											<a href="https://twitter.com/MinaMsnessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+												<img src="{% static 'img/sm/twitter.png' %}" alt="Twitter" style="width: 40px; height: 40px;">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul>
+										<li>
+											<a href="https://github.com/MinaSNessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+												<img src="{% static 'img/sm/github.png' %}" alt="GitHub" style="width: 45px; height: 45px;">
+											</a>
+										</li>
+										<li>
+											<a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+												<img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul>
+										<li>
+											<a href="https://www.upwork.com/freelancers/~010b5754c5b4ea1407" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+												<img src="{% static 'img/sm/upwork.png' %}" alt="Upwork" style="width: 40px; height: 40px;">
+											</a>
+										</li>
+										<li>
+											<a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+												<img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+-->
+<div class="container clearfix" style = "  color: #fff">
+    <div class="copyright">
+        <div class="row mt-2">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+                <p class="text-center">
+                    Copyright &copy; 2022- <script>document.write(new Date().getFullYear());</script>. All Rights Reserved.&mdash; Mina Nessim,
+                    <a href="https://mit-license.org/">MIT</a>,
+                    <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</footer><!-- End Footer -->
+

@@ -1,0 +1,25 @@
+{% extends 'basichtml/base.html' %}
+{% load static %}
+
+<head>
+  	{% block title%}
+        <title>Portfolio</title>
+	{% endblock %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+{% block content%}
+  <section id="hero" class="d-flex align-items-center" style="height: 150px; ">
+  </section><!-- End Hero -->
+
+{% for post in object_list%}
+    <div>
+        {{post.title}}</br>
+        {{post.body|safe}}
+    </div></br></br>
+{% endfor %}
+
+
+{% endblock %}
+</body>

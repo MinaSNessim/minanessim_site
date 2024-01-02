@@ -1,0 +1,487 @@
+{% extends 'basichtml/base.html' %}
+{% load static %}
+
+<head>
+  {% block title%}
+    <title>Mina Nessim</title>
+  {% endblock %}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+{% block content%}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Empowering with Data: Unveiling Potential, Enabling Success!</h1>
+          <h2>Welcome! I'm Mina, your partner in leveraging the power of data for business success.</h2>
+
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#contact" class="btn-get-started scrollto">Get Started</a>
+            <a href="https://www.youtube.com/@minanessim" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="{% static 'img/mina.png' %}" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <!-- <section id="cliens" class="cliens section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src= " {% static 'img/clients/client-1.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-2.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-3.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-4.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-5.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-6.png' %} " class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section> --> <!-- End Clients Section -->
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+
+            <p>
+                Back in the day, I was mesmerized by the mystery of solving The Rubik’s cube.
+                One YouTube took me on a journey where something that seemed impossible became a puzzle I managed to solve.
+            </p>
+            <p>
+                That made me realize, that every obstacle, every business challenge, is a puzzle waiting to be solved.
+                And just like a Rubik’s cube, it only takes the right algorithm to find the solution.
+            </p>
+            <p>
+              Today, I'm a dedicated data scientist and machine learning analyst, skilled in Python, SQL, VBA, and more.
+              Exploring the mysteries hidden within raw data, I transform it into actionable insights, fostering heightened business efficiency.
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+              <p>
+                I'm here to help your business thrive by leveraging data to its fullest potential.
+              </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> <strong>Digital Transformation Consultancy</strong> </li>
+              <li><i class="ri-check-double-line"></i> <strong>Data Training</strong> </li>
+              <li><i class="ri-check-double-line"></i> <strong>Machine Learning Solutions</strong> </li>
+              <li><i class="ri-check-double-line"></i> <strong>Operational Excellence</strong> </li>
+            </ul>
+            <a href="#contact" class="btn-learn-more">Contact</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Counter Section =======-->
+    <section id="rndmfacts" class="cta" style="display: flex; justify-content: center;">
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; color: white;">
+
+        <div class="counter" data-target={{countries_visited}}>
+          <h2 style="color: lightblue;">Cities Visited</h2>
+          <span id="count" style="color: white;">0</span>
+        </div>
+
+        <div class="counter" data-target= {{cups_of_coffee}}>
+          <h2 style="color: lightblue;">Cups of Coffee</h2>
+          <p><span id="count_coffee" style="color: white;">0</span></p>
+        </div>
+
+        <div class="counter " data-target ={{years_of_experience}}>
+          <h2 style="color: lightblue;">Years of Experience</h2>
+          <p><span id="count_experience" style="color: white;">0</span></p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>Empowering Your Business Growth with Tailored Solutions and Expert Consultation.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4><a href="">Digital Transformation Consultancy</a></h4>
+              <p>Guiding businesses for optimization, efficiency, and growth.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4><a href="">Data Training</a></h4>
+              <p>Offering courses to empower individuals with data analysis and machine learning skills.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4><a href="">Machine Learning Solutions</a></h4>
+              <p>Creating predictive models for informed decisions.</p>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-layer"></i></div>
+              <h4><a href="">Operational Excellence</a></h4>
+              <p>Enhancing workflows, processes, and supply chain logistics for optimized performance and streamlined operations.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+        <div class="legend">
+          <div class="legend-item legend-coding-skills">
+            <span></span> Coding Languages
+          </div>
+          <div class="legend-item legend-data-analysis-viz">
+            <span></span> Data Analysis and Visualization
+          </div>
+          <!-- Add other legend categories below -->
+          <div class="legend-item legend-statistical-skills">
+            <span></span> Statistical Skills
+          </div>
+          <div class="legend-item legend-machine-learning-ai">
+            <span></span> Machine Learning
+          </div>
+          <div class="legend-item legend-data-science-tools-libraries">
+            <span></span> Python Libraries
+          </div>
+          <div class="legend-item legend-operations-management">
+            <span></span> Operations and Management
+          </div>
+        </div>
+          <div class="bubble-chart">
+            <div class="category">
+              <div class="bubble coding-skills" data-skill="Python">Python</div>
+              <div class="bubble coding-skills" data-skill="VBA">VBA</div>
+              <div class="bubble coding-skills" data-skill="SQL">SQL</div>
+
+              <div class="bubble data-analysis-viz" data-skill="Tableau">Tableau</div>
+              <div class="bubble data-analysis-viz" data-skill="Power BI">Power BI</div>
+              <div class="bubble data-analysis-viz" data-skill="Advanced Excel">Advanced Excel</div>
+              <div class="bubble data-analysis-viz" data-skill="QlikView">QlikView</div>
+              <div class="bubble data-analysis-viz" data-skill="Oracle">Oracle</div>
+
+              <div class="bubble statistical-skills" data-skill="Probability Theory">Probability Theory</div>
+              <div class="bubble statistical-skills" data-skill="Multivariate Analysis">Multivariate Analysis</div>
+              <div class="bubble statistical-skills" data-skill="A/B and Hypothesis Testing">A/B and Hypothesis Testing</div>
+              <div class="bubble statistical-skills" data-skill="Regression Techniques">Regression Techniques</div>
+              <div class="bubble statistical-skills" data-skill="Data Modeling">Data Modeling</div>
+              <div class="bubble statistical-skills" data-skill="Statsmodels">Statsmodels</div>
+
+              <div class="bubble machine-learning-ai">Artificial Intelligence (AI)</div>
+              <div class="bubble machine-learning-ai">Computer Vision</div>
+              <div class="bubble machine-learning-ai">NLP</div>
+              <div class="bubble machine-learning-ai">Supervised Learning</div>
+              <div class="bubble machine-learning-ai">Unsupervised Learning</div>
+              <div class="bubble machine-learning-ai">Scikit-learn</div>
+              <div class="bubble machine-learning-ai">TensorFlow</div>
+              <div class="bubble machine-learning-ai">Deep Learning</div>
+              <div class="bubble machine-learning-ai">PyTorch</div>
+
+              <div class="bubble data-science-tools-libraries">Pandas</div>
+              <div class="bubble data-science-tools-libraries">NumPy</div>
+              <div class="bubble data-science-tools-libraries">Matplotlib</div>
+              <div class="bubble data-science-tools-libraries">Scrapy</div>
+              <div class="bubble data-science-tools-libraries">BeautifulSoup</div>
+              <div class="bubble data-science-tools-libraries">Selenium</div>
+              <div class="bubble data-science-tools-libraries">Django</div>
+              <div class="bubble data-science-tools-libraries">Flask</div>
+
+              <div class="bubble operations-management">Project Management</div>
+              <div class="bubble operations-management">Supply & Demand</div>
+              <div class="bubble operations-management">Performance Metrics & KPIs</div>
+              <div class="bubble operations-management">Supply Chain Operations</div>
+              <div class="bubble operations-management">Logistics Management</div>
+              <div class="bubble operations-management">Stock Management</div>
+              <div class="bubble operations-management">Enterprise Resource Planning (ERP)</div>
+              <div class="bubble operations-management">Training</div>
+            </div>
+          </div>
+        </div>
+    </section><!-- End Skills Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Showcasing My Journey Through Projects and Innovations.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          {% for choice in choices %}
+            <li data-filter=".{{ choice.0 }}">{{ choice.1 }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          {% for port in portfolio %}
+              <div class="col-lg-4 col-md-6 portfolio-item {% for cat in port.category%}' ' {{ cat }} ' ' {% endfor %} ">
+                <div class="portfolio-img"><img src=" {{ port.photo.url }} " class="img-fluid" alt=""></div>
+                  <div class="portfolio-info">
+                    <h4 >{{ port.title }}</h4>
+                    <h4></h4>
+                    <p> {{ port.insight }} </p>
+                    <a href="{{ port.photo.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
+                       title="{{ port.insight }}"><i class="bx bx-plus"></i></a>
+                    <a href="/portfolio/{{port.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+              </div>
+          {% endfor %}
+
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <!-- ======= Courses Section =======-->
+    <section id="courses" class="courses">
+      <div class="container"  data-aos="fade-up">
+        <div class="section-title">
+          <h2>Courses</h2>
+          <p>Hey there, Dive into Awesome Courses: Learn, Explore, and Conquer Data Magic!</p>
+        </div>
+
+        <ul id="courses-filters" class="d-flex justify-content-center">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-excel">Excel</li>
+          <li data-filter=".filter-sql">SQL</li>
+          <li data-filter=".filter-python">Python</li>
+          <!-- Add more filter categories as needed -->
+        </ul>
+
+        <div class="row courses-container">
+          <!-- Course Excel 1 -->
+          <div class="col-lg-4 col-md-6 course-item filter-excel">
+            <div class="course-img"> <img src=" {% static 'img/courses/excel-1.png' %} " class="img-fluid" alt="Excel 1"></div>
+            <div class="course-info">
+              <h4>Excel for beginners</h4>
+              <p>Excel</p>
+              <a href="{% static 'img/courses/excel-1.png' %}" data-gallery="coursesGallery" class="course-lightbox preview-link" title="Excel for beginners"><i class="bx bx-plus"></i></a>
+              <a href="course-details.html" class="details-link" title="More Details">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Course Excel 2 -->
+          <div class="col-lg-4 col-md-6 course-item filter-excel">
+            <div class="course-img"> <img src=" {% static 'img/courses/excel-2.png' %} " class="img-fluid" alt="Excel 2"></div>
+            <div class="course-info">
+              <h4>Excel for intermediate</h4>
+              <p>Excel</p>
+              <a href="{% static 'img/courses/excel-2.png' %}" data-gallery="coursesGallery" class="course-lightbox preview-link" title="Excel for intermediate"><i class="bx bx-plus"></i></a>
+              <a href="course-details.html" class="details-link" title="More Details">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Course Excel 3 -->
+
+          <div class="col-lg-4 col-md-6 course-item filter-excel">
+            <div class="course-img"> <img src=" {% static 'img/courses/excel-3.png' %} " class="img-fluid" alt="Excel 3"></div>
+            <div class="course-info">
+              <h4>Excel for experts</h4>
+              <p>Excel</p>
+              <a href="{% static 'img/courses/excel-3.png' %}" data-gallery="coursesGallery" class="course-lightbox preview-link" title="Excel for experts"><i class="bx bx-plus"></i></a>
+              <a href="course-details.html" class="details-link" title="More Details">
+                <i class="bx bx-link"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Course item 2 -->
+          <div class="col-lg-4 col-md-6 course-item filter-cat2">
+            <div class="course-img"> <img src=" {% static 'img/portfolio/portfolio-3.jpg' %}"  class="img-fluid"  alt="Course 2 Image"></div>
+            <div class="course-info">
+              <h4>Course 2 Title</h4>
+              <p>Category 2</p>
+              <a href=" {% static 'img/portfolio/portfolio-3.jpg' %}" data-gallery="coursesGallery" class="course-lightbox preview-link" title="Course 2"><i class="bx bx-plus"></i></a>
+              <a href="course-details.html" class="details-link" title="More Details">
+                <i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+
+
+          <!-- Add more course items based on categories -->
+        </div>
+      </div>
+</section>
+
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Blog</h2>
+          <p>Here you can find my articles about data, ML, AI, statics, and more</p>
+        </div>
+
+        <ul id="blog-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          {% for choice in blog_choices %}
+            <li data-filter=".{{ choice.0 }}">{{ choice.1 }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="row blog-container" data-aos="fade-up" data-aos-delay="200">
+
+          {% for blog in blogs %}
+              <div class="col-lg-4 col-md-6 blog-item {% for cat in blog.category%}' ' {{ cat }} ' ' {% endfor %} ">
+                <div class="blog-img"><img src=" {{ blog.photo.url }} " class="img-fluid" alt=""></div>
+                  <div class="blog-info">
+                    <h4 >{{ blog.title }}</h4>
+                    <h4></h4>
+                    <p> {{ blog.insight }} </p>
+                    <a href="{{ blog.photo.url }}" data-gallery="blogGallery" class="blog-lightbox preview-link"
+                       title="{{ blog.insight }}"><i class="bx bx-plus"></i></a>
+                    <a href="/blog/{{blog.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+              </div>
+          {% endfor %}
+
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= Certificates Section ======= -->
+    <section id="certificates" class="skills">
+      <div class="container" data-aos="fade-up">
+      <div class="section-title">
+      <h2>Certificates</h2>
+      </div>
+      <div class="swiper-container custom-swiper">
+        <div class="swiper-wrapper">
+
+          {% for image in image_list %}
+            <div class="swiper-slide">
+              <img src="{% static 'img/certificates/' %}{{ image }}" alt="{{ image }}" class="bordered-image portfolio-lightbox preview-link">
+            </div>
+          {% endfor %}
+
+        <!-- Add more swiper-slide divs for additional images -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>
+            Feel free to reach out! I'm here to assist you. Whether you have a question about my services, want to collaborate, or just want to say hello, I'd love to hear from you. Drop me a line using the form below, and I'll get back to you as soon as possible.
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
+
+            <form action="{% url 'contact_view' %}" method="post" role="form" class="php-email-form" name="contact_form">
+              {% csrf_token %}
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label >Your Name</label>
+                  {{ contact_form.name }}
+                </div>
+                <div class="form-group col-md-6">
+                  <label >Your Email</label>
+                  {{ contact_form.email }}
+                </div>
+              </div>
+              <div class="form-group">
+                <label >Subject</label>
+                {{ contact_form.subject }}
+              </div>
+
+           <div class="row">
+              <div class="form-group">
+                <label >Message</label>
+                {{ contact_form.message }}
+
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+           </div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+{% endblock%}
+<div id="footer">
+
+</div>
+</body>

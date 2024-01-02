@@ -1,0 +1,26 @@
+{% extends 'basichtml/base.html' %}
+{% load static %}
+
+{% block content %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- Your form -->
+<form action="" method="post" class="container">
+    {% csrf_token %}
+    <div class="form-row align-items-end">
+        <div class="col-md-4">
+            <div class="container">
+            <div class="form-group mb-0">
+                {{ subscriber_form.email }}
+            </div>
+        </div>
+        <div class="col-md-4 mt-md-0 mt-2">
+            <button type="submit" class="btn btn-primary btn-block" style="border-radius: 50px; background: #47b2e4; border: 0;">Subscribe</button>
+        </div>
+</div>
+    </div>
+</form>
+
+{% endblock %}

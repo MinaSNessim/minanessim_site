@@ -1,0 +1,43 @@
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href= "{% url 'home' %}">Mina Nessim</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+<!--
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#courses">Courses</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto {% if request.path == '/home/' %}active{% endif %}" href="{% url 'home' %}">Home</a></li>
+          <li><a class="nav-link scrollto {% if '#' in request.get_full_path and 'about' in request.get_full_path %}active{% endif %}" href="{% url 'home' %}#about">About</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#skills">Skills</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#courses">Courses</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#certificates">Certificates</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}#contact">Contact</a></li>
+            <!-- Other list items -->
+        </ul>
+      </nav><!-- .navbar -->
+
+
+
+
+
+    </div>
+  </header><!-- End Header -->
