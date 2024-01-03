@@ -414,7 +414,9 @@
 
           {% for image in image_list %}
             <div class="swiper-slide">
-              <img src="{% static 'img/certificates/' %}{{ image }}" alt="{{ image }}" class="bordered-image portfolio-lightbox preview-link">
+              <a href="{% static 'img/certificates/' %}{{ image }}" data-lightbox="image">
+              <img src="{% static 'img/certificates/' %}{{ image }}" alt="{{ image }}" class="bordered-image blog-lightbox preview-link">
+              </a>
             </div>
           {% endfor %}
 
