@@ -18,13 +18,14 @@ CKEDITOR_UPLOAD_PATH = 'content/ckeditor/'
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
-
-ALLOWED_HOSTS = ["*"]
+try:
+    if config('DEBUG', default=True, cast=bool) == True:
+        DEBUG = config('DEBUG', default=True, cast=bool)
+    else:
+        DEBUG = os.getenv('DEBUG', default=False)
+except:
+    DEBUG = os.getenv('DEBUG', default=False)
 
 
 # Application definition
@@ -119,10 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/')
-]
+
 
 
 # Default primary key field type
