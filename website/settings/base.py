@@ -4,18 +4,19 @@ import os
 from decouple import config
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # Define the directory where user-uploaded files will be stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # Define the URL that handles the media served from MEDIA_ROOT
 MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 CKEDITOR_UPLOAD_PATH = 'content/ckeditor/'
 
 

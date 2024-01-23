@@ -6,6 +6,8 @@ from .forms import SubscriberForm, ContactForm, PortfolioForm
 from django.core.mail import send_mail
 import os
 from datetime import datetime
+from django.conf import settings
+
 
 
 # Create your views here.
@@ -13,10 +15,13 @@ def home(request):
     subscriber_form = SubscriberForm()
     contact_form = ContactForm()
 
-    image_dir = 'static/img/certificates'
-    image_dir2 = '/home/msnessim/minanessim_site/static/img/certificates'
+    try:
+        image_dir = 'static/img/certificates'
+        image_list = os.listdir(image_dir)
+    except:
+        image_dir = '/home/msnessim/minanessim_site/static/img/certificates'
+        image_list = os.listdir(image_dir)
 
-    image_list = os.listdir(image_dir)
 
     countries_visited = 8+1+1+3+5+3+3+2+1
     cups_of_coffee = 21300 + (datetime.now() - datetime(2023, 1, 12)).days * 5
