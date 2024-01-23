@@ -2,6 +2,10 @@ from pathlib import Path
 import os
 # Created .env and added secret key to it
 from decouple import config
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -19,13 +23,14 @@ CKEDITOR_UPLOAD_PATH = 'content/ckeditor/'
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
 try:
-    if config('DEBUG', default=True, cast=bool) == True:
-        DEBUG = config('DEBUG', default=True, cast=bool)
+    if os.environ['DEBUG']:
+        DEBUG = os.environ['DEBUG']
     else:
-        DEBUG = os.getenv('DEBUG', default=False)
+        DEBUG = False
 except:
-    DEBUG = os.getenv('DEBUG', default=False)
+    DEBUG = False
 
 
 # Application definition

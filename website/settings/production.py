@@ -3,6 +3,8 @@ from .base import *
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
 
+DEBUG = False
+
 ALLOWED_HOSTS = ['msnessim.pythonanywhere.com']
 
 STATIC_ROOT = '/home/msnessim/minanessim_site/static'
