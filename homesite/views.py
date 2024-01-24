@@ -13,7 +13,10 @@ def home(request):
     subscriber_form = SubscriberForm()
     contact_form = ContactForm()
 
-    image_dir = 'static/img/certificates'
+    try:
+        image_dir = 'static/img/certificates'
+    except:
+        image_dir ='/home/msnessim/minanessim_site/static/img/certificates'
     image_list = os.listdir(image_dir)
 
     countries_visited = 8+1+1+3+5+3+3+2+1

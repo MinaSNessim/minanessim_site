@@ -4,6 +4,9 @@ import os
 from decouple import config
 
 
+
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -19,14 +22,18 @@ CKEDITOR_UPLOAD_PATH = 'content/ckeditor/'
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: don't run with debug turned on in production!
-try:
-    if config('DEBUG', default=True, cast=bool) == True:
-        DEBUG = config('DEBUG', default=True, cast=bool)
-    else:
-        DEBUG = os.getenv('DEBUG', default=False)
-except:
-    DEBUG = os.getenv('DEBUG', default=False)
+DEBUG = False
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.getenv('SECRET_KEY')
+
+ALLOWED_HOSTS = ['msnessim.pythonanywhere.com']
+
+STATIC_ROOT = '/home/msnessim/minanessim_site/static/'
+STATIC_URL = '/home/msnessim/minanessim_site/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/')
+]
 
 # Application definition
 
