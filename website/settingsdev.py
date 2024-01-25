@@ -3,38 +3,36 @@ import os
 # Created .env and added secret key to it
 from decouple import config
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
 
+ALLOWED_HOSTS = ["*"]
 
-
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = config('SECRET_KEY')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 # Define the directory where user-uploaded files will be stored
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR.parent, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Define the URL that handles the media served from MEDIA_ROOT
 MEDIA_URL = '/media/'
+STATIC_URL = '/static/'
+
 CKEDITOR_UPLOAD_PATH = 'content/ckeditor/'
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
-
-ALLOWED_HOSTS = ["*"]
-
-STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR.parent, 'static/')
+    os.path.join(BASE_DIR.parent, 'static')
 ]
 
-STATIC_ROOT = '/static'
 
 # Application definition
 
@@ -92,6 +90,25 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mdjango',
+        'USER': 'postgres',
+        'PASSWORD': config(DBPASS),
+        'HOST': 'localhost',   # Set to the appropriate host
+        'PORT': '5432',        # Set to the appropriate port
+    }
+}
+
+
+"""
+
+
+
 
 
 # Password validation

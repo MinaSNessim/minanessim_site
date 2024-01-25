@@ -4,9 +4,6 @@ import os
 from decouple import config
 
 
-
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,7 +29,7 @@ ALLOWED_HOSTS = ['msnessim.pythonanywhere.com']
 STATIC_ROOT = '/home/msnessim/minanessim_site/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static/')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 # Application definition

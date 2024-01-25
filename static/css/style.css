@@ -1975,6 +1975,11 @@ section {
   /* Additional styles */
 }
 
+.bubble:hover {
+  transform: scale(1.2); /* Increase size on hover */
+  transition: transform 0.3s ease, background 0.3s ease; /* Add smooth transition */
+}
+
 .category {
   margin-bottom: 20px; /* Space between categories */
 }
@@ -1983,25 +1988,44 @@ section {
 .coding-skills {
     border: 2px solid #007bff; /* Blue border */
 }
+.coding-skills:hover {
+  background: linear-gradient(45deg, #007bff, #FFFFFF);
+}
 
 .data-analysis-viz {
     border: 2px solid #28a745; /* Blue border */
 }
 
+.data-analysis-viz:hover {
+  background: linear-gradient(45deg, #28a745, #FFFFFF);
+}
+
 .statistical-skills{
     border: 2px solid #dc3545; /* Blue border */
+}
+.statistical-skills:hover {
+  background: linear-gradient(45deg, #dc3545, #FFFFFF);
 }
 
 .machine-learning-ai{
     border: 2px solid #ffcf0f; /* Blue border */
 }
+.machine-learning-ai:hover {
+  background: linear-gradient(45deg, #ffcf0f, #FFFFFF);
+}
 
 .data-science-tools-libraries{
     border: 2px solid #fd7e14; /* Blue border */
 }
+.data-science-tools-libraries:hover {
+  background: linear-gradient(45deg, #fd7e14, #FFFFFF);
+}
 
 .operations-management{
   border: 2px solid #20cfff; /* Blue border */
+}
+.operations-management:hover {
+  background: linear-gradient(45deg, #20cfff, #FFFFFF);
 }
 
 
@@ -2189,5 +2213,4 @@ section {
 .blog-details .blog-description p {
   padding: 0;
 }
-
 
