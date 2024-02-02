@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -98,14 +98,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mdjango',
         'USER': 'postgres',
-        'PASSWORD': config(DBPASS),
+        'PASSWORD': 'password12356',
         'HOST': 'localhost',   # Set to the appropriate host
         'PORT': '5432',        # Set to the appropriate port
     }
 }
 
 
-"""
+
 
 
 
