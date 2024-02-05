@@ -1,0 +1,8 @@
+// Mind Map
+digraph {
+	A [label="Root Node"]
+	B [label="Child Node 1"]
+	C [label="Child Node 2"]
+	A -> B
+	A -> C
+}

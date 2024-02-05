@@ -1,26 +1,52 @@
 {% extends 'basichtml/base.html' %}
 {% load static %}
 
-{% block content %}
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    {% block title%}
+        <title> Blog </title>
+    {% endblock%}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
+<body>
+    {% block content %}
+        <section id="hero" class="d-flex align-items-center" style="height: 150px; "></section>
 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<!-- Your form -->
-<form action="" method="post" class="container">
-    {% csrf_token %}
-    <div class="form-row align-items-end">
-        <div class="col-md-4">
-            <div class="container">
-            <div class="form-group mb-0">
-                {{ subscriber_form.email }}
+        <section id="blog" class="blog section-bg">
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h2>Blog</h2>
+              <p>Here you can find my articles about data, ML, AI, statics, and more</p>
             </div>
-        </div>
-        <div class="col-md-4 mt-md-0 mt-2">
-            <button type="submit" class="btn btn-primary btn-block" style="border-radius: 50px; background: #47b2e4; border: 0;">Subscribe</button>
-        </div>
-</div>
-    </div>
-</form>
 
-{% endblock %}
+            <ul id="blog-flters" class="d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-delay="100">
+              <li data-filter="*" class="filter-active">All</li>
+              {% for choice in blog_choices %}
+                <li data-filter=".{{ choice.0 }}">{{ choice.1 }}</li>
+              {% endfor %}
+            </ul>
+
+            <div class="row blog-container" data-aos="fade-up" data-aos-delay="200">
+
+              {% for blog in blogs %}
+                  <div class="col-lg-4 col-md-6 blog-item {% for cat in blog.category%}' ' {{ cat }} ' ' {% endfor %} ">
+                    <div class="blog-img"><img src=" {{ blog.photo.url }} " class="img-fluid" alt=""></div>
+                      <div class="blog-info">
+                        <h4 >{{ blog.title }}</h4>
+                        <h4></h4>
+                        <p> {{ blog.insight }} </p>
+                        <a href="{{ blog.photo.url }}" data-gallery="blogGallery" class="blog-lightbox preview-link"
+                           title="{{ blog.insight }}"><i class="bx bx-plus"></i></a>
+                        <a href="/blog/{{blog.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                      </div>
+                  </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+        </section><!-- End Why Us Section -->
+
+
+    {% endblock %}
+</body>

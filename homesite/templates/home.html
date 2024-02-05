@@ -10,14 +10,14 @@
 
 <body>
 {% block content%}
-  <!-- ======= Hero Section ======= -->
+
   <section id="hero" class="d-flex align-items-center">
 
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Empowering with Data: Unveiling Potential, Enabling Success!</h1>
-          <h2>Welcome! I'm Mina, your partner in leveraging the power of data for business success.</h2>
+          <h1>Rise Above the competitors: Your Business, Our Expertise!</h1>
+          <h2>We commit to insightful business assessments, pinpointing digital opportunities that align precisely with your business goals and aspirations.</h2>
 
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#contact" class="btn-get-started scrollto">Get Started</a>
@@ -30,107 +30,9 @@
       </div>
     </div>
 
-  </section><!-- End Hero -->
-  <main id="main">
+  </section>
 
-    <!-- ======= Clients Section ======= -->
-    <!-- <section id="cliens" class="cliens section-bg">
-      <div class="container">
-
-        <div class="row" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src= " {% static 'img/clients/client-1.png' %} " class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src=" {% static 'img/clients/client-2.png' %}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src=" {% static 'img/clients/client-3.png' %} " class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src=" {% static 'img/clients/client-4.png' %} " class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src=" {% static 'img/clients/client-5.png' %} " class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src=" {% static 'img/clients/client-6.png' %} " class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section> --> <!-- End Clients Section -->
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-
-            <p>
-                Back in the day, I was mesmerized by the mystery of solving The Rubik’s cube.
-                One YouTube took me on a journey where something that seemed impossible became a puzzle I managed to solve.
-            </p>
-            <p>
-                That made me realize, that every obstacle, every business challenge, is a puzzle waiting to be solved.
-                And just like a Rubik’s cube, it only takes the right algorithm to find the solution.
-            </p>
-            <p>
-              Today, I'm a dedicated data scientist and machine learning analyst, skilled in Python, SQL, VBA, and more.
-              Exploring the mysteries hidden within raw data, I transform it into actionable insights, fostering heightened business efficiency.
-            </p>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-              <p>
-                I'm here to help your business thrive by leveraging data to its fullest potential.
-              </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> <strong>Digital Transformation Consultancy</strong> </li>
-              <li><i class="ri-check-double-line"></i> <strong>Data Training</strong> </li>
-              <li><i class="ri-check-double-line"></i> <strong>Machine Learning Solutions</strong> </li>
-              <li><i class="ri-check-double-line"></i> <strong>Operational Excellence</strong> </li>
-            </ul>
-            <a href="#contact" class="btn-learn-more">Contact</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= Counter Section =======-->
-    <section id="rndmfacts" class="cta" style="display: flex; justify-content: center;">
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; color: white;">
-
-        <div class="counter" data-target={{countries_visited}}>
-          <h2 style="color: lightblue;">Cities Visited</h2>
-          <span id="count" style="color: white;">0</span>
-        </div>
-
-        <div class="counter" data-target= {{cups_of_coffee}}>
-          <h2 style="color: lightblue;">Cups of Coffee</h2>
-          <p><span id="count_coffee" style="color: white;">0</span></p>
-        </div>
-
-        <div class="counter " data-target ={{years_of_experience}}>
-          <h2 style="color: lightblue;">Years of Experience</h2>
-          <p><span id="count_experience" style="color: white;">0</span></p>
-        </div>
-
-      </div>
-
-    </section>
-
+<main id="main">
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
       <div class="container" data-aos="fade-up">
@@ -141,34 +43,26 @@
         </div>
 
         <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-4 col-md-4   d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Digital Transformation Consultancy</a></h4>
+              <h4><a href= "{% url 'digital' %}">Digital Transformation Consultancy</a></h4>
               <p>Guiding businesses using figures and numbers for optimization, efficiency, and growth.</p>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="col-xl-4 col-md-4   d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Data Training</a></h4>
+              <h4><a href="{% url 'training' %}">Data Training</a></h4>
               <p>Offering courses to empower individuals with data analysis and machine learning skills.</p>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Machine Learning Solutions</a></h4>
-              <p>Creating predictive Supervised and Unsupervised models for informed decisions </p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="col-xl-4 col-md-4   d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Operational Excellence</a></h4>
+              <h4><a href="{% url 'erp' %}">Operational Excellence</a></h4>
               <p>Enhancing workflows, processes, and supply chain logistics for optimized performance and streamlined operations.</p>
             </div>
           </div>
@@ -182,8 +76,9 @@
     <section id="skills" class="skills">
       <div class="container " data-aos="fade-up">
         <div class="section-title">
-          <h2>Skills</h2>
+          <h2>Tech Stack</h2>
         </div>
+
         <div class="legend">
           <div class="legend-item legend-coding-skills">
             <span></span> Coding Languages
@@ -251,29 +146,34 @@
               <div class="bubble operations-management">Stock Management</div>
               <div class="bubble operations-management">Enterprise Resource Planning (ERP)</div>
               <div class="bubble operations-management">Training</div>
+
             </div>
           </div>
+
         </div>
+
+
     </section><!-- End Skills Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Showcasing My Journey Through Projects and Innovations.</p>
+          <h2>Case Studies</h2>
+          <p>Showcasing Our Journey Through Projects and Innovations.</p>
         </div>
 
+        <!--
         <ul id="portfolio-flters" class="d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active">All</li>
           {% for choice in choices %}
             <li data-filter=".{{ choice.0 }}">{{ choice.1 }}</li>
           {% endfor %}
-        </ul>
+        </ul> -->
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          {% for port in portfolio %}
+          {% for port in specific_portfolio  %}
               <div class="col-lg-4 col-md-6 portfolio-item {% for cat in port.category%}' ' {{ cat }} ' ' {% endfor %} ">
                 <div class="portfolio-img"><img src=" {{ port.photo.url }} " class="img-fluid" alt=""></div>
                   <div class="portfolio-info">
@@ -289,8 +189,14 @@
 
 
         </div>
+        <br/> <br/>
+        <div class="text-center">
+          <a href="casestudy" class="btn btn-learn-more mx-auto">View more of our projects</a>
+        </div>
+
 
       </div>
+
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Courses Section =======-->
@@ -384,7 +290,7 @@
 
         <div class="row blog-container" data-aos="fade-up" data-aos-delay="200">
 
-          {% for blog in blogs %}
+          {% for blog in blogs|slice:":3" %}
               <div class="col-lg-4 col-md-6 blog-item {% for cat in blog.category%}' ' {{ cat }} ' ' {% endfor %} ">
                 <div class="blog-img"><img src=" {{ blog.photo.url }} " class="img-fluid" alt=""></div>
                   <div class="blog-info">
@@ -398,89 +304,217 @@
               </div>
           {% endfor %}
 
-        </div>
 
+
+
+        </div>
+        <br/><br/><br/>
+<div class="text-center">
+    <a href="blog" class="btn btn-learn-more mx-auto">Read More Posts</a>
+</div>
       </div>
     </section><!-- End Why Us Section -->
 
-    <!-- ======= Certificates Section ======= -->
-    <section id="certificates" class="skills">
-      <div class="container" data-aos="fade-up">
+  <!-- ======= About Us Section ======= -->
+  <section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
       <div class="section-title">
-      <h2>Certificates</h2>
+        <h2>About</h2>
       </div>
-      <div class="swiper-container custom-swiper">
-        <div class="swiper-wrapper">
 
-          {% for image in image_list %}
-            <div class="swiper-slide">
-              <a href="{% static 'img/certificates/' %}{{ image }}" data-lightbox="image">
-              <img src="{% static 'img/certificates/' %}{{ image }}" alt="{{ image }}" class="bordered-image blog-lightbox preview-link">
-              </a>
-            </div>
-          {% endfor %}
+      <div class="section-title">
+        <h3>Who are we?</h3>
+      </div>
 
-        <!-- Add more swiper-slide divs for additional images -->
-          </div>
-          <div class="swiper-pagination"></div>
+      <div class="row content">
+        <div class="col-lg-6">
+          <p>
+            Data Sieger is a company focused on using technology to help businesses evolve worldwide. Our commitment is
+            using our knowledge to help businesses achieve their vision and goals.
+          </p>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <p>
+            We specialize in digital transformation, data training, and operation efficiency, you can think of us as a
+            partner in your success, because at the end your success is ours.
+          </p>
+          <a href="about" class="btn-learn-more">Read More About Us</a>
         </div>
       </div>
-    </section>
+      <br/>
+
+      <div class="section-title">
+        <h3>About the founder</h3>
+      </div>
+
+      <div class="row content">
+        <div class="col-lg-6">
+          <p>
+            Hello, I’m Mina, back in the day, I was mesmerized by the mystery of solving The Rubik’s cube. One YouTube
+            took me on a journey where something that seemed impossible became a puzzle I managed to solve.
+          </p>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0">
+          <p>
+            I'm here to help your business thrive by leveraging data to its fullest potential.
+          </p>
+
+          <a href="about" class="btn-learn-more">Read More about our Story</a>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End About Us Section -->
+
+    <!-- ======= Counter Section =======-->
+  <section id="rndmfacts" class="cta" style="display: flex ; justify-content: center;">
+    <div style="display: flex; flex-wrap: wrap; gap: 50px; color: white;">
+
+      <div class="counter" data-target={{countries_visited}}>
+        <h2 style="color: lightblue;">Cities Visited</h2>
+        <span id="count" style="color: white;">0</span>
+      </div>
+
+      <div class="counter" data-target={{rubix_puzzles}}>
+        <h2 style="color: lightblue;">Puzzles Solved</h2>
+        <p><span id="count_coffee" style="color: white;">0</span></p>
+      </div>
+
+      <div class="counter " data-target={{years_of_experience}}>
+        <h2 style="color: lightblue;">Years of Experience</h2>
+        <p><span id="count_experience" style="color: white;">0</span></p>
+      </div>
+    </div>
+  </section>
+
+    <!-- ======= Clients Section ======= -->
+    <!-- <section id="cliens" class="cliens section-bg">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-in">
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src= " {% static 'img/clients/client-1.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-2.png' %}" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-3.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-4.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-5.png' %} " class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src=" {% static 'img/clients/client-6.png' %} " class="img-fluid" alt="">
+          </div>
+
+        </div>
+
+      </div>
+    </section> --> <!-- End Clients Section -->
 
     <!-- ======= Contact Section ======= -->
+    <!--
     <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
+      <div class='container'>
         <div class="section-title">
           <h2>Contact</h2>
           <p>
-            Feel free to reach out! I'm here to assist you. Whether you have a question about my services, want to collaborate, or just want to say hello, I'd love to hear from you. Drop me a line using the form below, and I'll get back to you as soon as possible.
+            Don't hesitate to get in touch!, whether you have questions, want to
+            collaborate, or are unsure how to benefit from our services.
+            Feel free to drop me a line using the form below, and I'll respond promptly, offering a complimentary
+            consultation.
           </p>
         </div>
-
         <div class="row">
-
-          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-
-            <form action="{% url 'contact_view' %}" method="post" role="form" class="php-email-form" name="contact_form">
+          <div class="col-md-3 text-center ">
+            <div class="contact-info">
+              <br/>
+              <div class="info-item">
+                <h2>You can Also:</h2>
+                <br/><br/>
+                <strong>Call On:</strong>
+                <br/>
+                <p>+971 58 +++++ <br> Mon-Fri: 9 AM - 6 PM (GST)</p>
+              </div>
+              <div class="info-item">
+                <strong>Chat On Whatsapp:</strong>
+                <br>
+                <a href="https://wa.me/97158" target="_blank" rel="noopener noreferrer"
+                   style="text-decoration: none; background-color: transparent;">
+                  <img src="{% static 'img/sm/wa.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
+                </a>
+              </div>
+              <div class="info-item">
+                <br>
+                <strong>Send Email:</strong>
+                <br>
+                <a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"
+                   style="text-decoration: none; background-color: transparent;">
+                  <img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
+                </a>
+              </div>
+              <div class="info-item">
+                <br>
+                <strong>Message on LinkedIn:</strong>
+                <br>
+                <a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"
+                   style="text-decoration: none; background-color: transparent;">
+                  <img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <form action="{% url 'contact_view' %}" method="post" role="form" class="php-email-form"
+                  name="contact_form">
               {% csrf_token %}
               <div class="row">
                 <div class="form-group col-md-6">
-                  <label >Your Name</label>
+                  <label>Your Name</label>
                   {{ contact_form.name }}
                 </div>
                 <div class="form-group col-md-6">
-                  <label >Your Email</label>
+                  <label>Your Email</label>
                   {{ contact_form.email }}
                 </div>
               </div>
               <div class="form-group">
-                <label >Subject</label>
+                <label>Subject</label>
                 {{ contact_form.subject }}
               </div>
-
-           <div class="row">
-              <div class="form-group">
-                <label >Message</label>
-                {{ contact_form.message }}
-
+              <div class="row">
+                <div class="form-group">
+                  <label>Message</label>
+                  {{ contact_form.message }}
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
               </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-           </div>
             </form>
           </div>
-
         </div>
-
       </div>
-    </section><!-- End Contact Section -->
+    </section>
+-->
 
-  </main><!-- End #main -->
+  </main>
 
 {% endblock%}
 <div id="footer">

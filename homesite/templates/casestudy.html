@@ -1,0 +1,54 @@
+{% extends 'basichtml/base.html' %}
+{% load static %}
+
+<head>
+    {% block title%}
+        <title> Case Studies </title>
+    {% endblock%}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    {% block content%}
+    <section id="hero" class="d-flex align-items-center" style="height: 150px; "></section>
+
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Case Studies</h2>
+          <p>Showcasing My Journey Through Projects and Innovations.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="d-flex flex-wrap justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          {% for choice in choices %}
+            <li data-filter=".{{ choice.0 }}">{{ choice.1 }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+          {% for port in portfolio %}
+              <div class="col-lg-4 col-md-6 portfolio-item {% for cat in port.category%}' ' {{ cat }} ' ' {% endfor %} ">
+                <div class="portfolio-img"><img src=" {{ port.photo.url }} " class="img-fluid" alt=""></div>
+                  <div class="portfolio-info">
+                    <h4 >{{ port.title }}</h4>
+                    <h4></h4>
+                    <p> {{ port.insight }} </p>
+                    <a href="{{ port.photo.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
+                       title="{{ port.insight }}"><i class="bx bx-plus"></i></a>
+                    <a href="/portfolio/{{port.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                  </div>
+              </div>
+          {% endfor %}
+
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Section -->
+
+
+    {% endblock%}
+</body>

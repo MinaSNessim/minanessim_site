@@ -17,6 +17,9 @@ urlpatterns = [
     path('contact_view/', views.contact_view, name='contact_view'),
     # path('portfolio/', views.Protfoliopage.as_view(), name='portfolio'),
     path('portfolio/<int:portfolio_id>/', views.portfolio_detail, name='portfolio_detail'),
-    path('blog/<int:blog_id>/', views.blog_detail, name='blog_detail')
-
-    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('blog/<int:blog_id>/', views.blog_detail, name='blog_detail'),
+    path('training/', views.training, name='training'),
+    path('erp/', views.erp, name='erp'),
+    path('digital/', views.digital, name='digital'),
+    path('casestudy/', views.casestudy, name='casestudy')
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
