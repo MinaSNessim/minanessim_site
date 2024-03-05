@@ -1,7 +1,39 @@
+{% extends 'basichtml/base.html' %}
+{% load static %}
+
+
 <head>
-    <title>Page Not Found</title>
+    <title>Highly Confident Data </title>
 </head>
+
 <body>
-    <h1>404 - Page Not Found</h1>
-    <p>Sorry, the page you are looking for does not exist.</p>
+{% block content%}
+<section id="hero" class="d-flex align-items-center" style="height: 170px; "></section>
+
+<section id="about2" class="about">
+    <div class="container" data-aos="fade-up">
+
+
+        <div class="section-title">
+            <h2>Access Restricted</h2>
+            <h4 style="text-align: center;">It seems like you've stumbled upon a highly confidential data vault.
+        To gain access, you must prove your data prowess by solving the following intricate equation</h4>
+        </div>
+
+         <div class="container">
+                <img src="{% static 'img/equ.jpg' %}" alt="Highly restricted data"
+                     style="width: auto; height: 240px; object-fit: contain; ">
+
+            </div>
+        <br/>
+        <h5 style="text-align: center;">
+            Just kidding this is just 404 page, I don't even know what you are looking for,<br/>
+            You can go back to home page, or you can stay, you don't have to listen to me, I'm just a webpage<br/>
+        </h5>
+        <br/> <br/>
+        <h6> Or is it a trick to keep the data safe?</h6>
+
+    </div>
+</section>
+{% endblock%}
 </body>

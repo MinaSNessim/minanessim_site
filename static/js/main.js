@@ -406,6 +406,10 @@ window.addEventListener('scroll', () => {
   debouncedStartCoffeeCounter();
 });
 
+
+
+
+
 /*
 
 // Counter for number of years

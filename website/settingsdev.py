@@ -2,11 +2,13 @@ from pathlib import Path
 import os
 # Created .env and added secret key to it
 from decouple import config
+from django.utils.translation import gettext_lazy as _
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
@@ -100,7 +102,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'password12356',
         'HOST': 'localhost',   # Set to the appropriate host
-        'PORT': '5432',        # Set to the appropriate port
+        'PORT': '5432',
     }
 }
 
@@ -141,7 +143,14 @@ USE_I18N = True
 
 USE_TZ = True
 
+LANGUAGES = [
+    ('en', _('English')),
+    ('ar', _('Arabic')),
+]
 
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
@@ -153,10 +162,11 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
+config('SECRET_KEY')
 # Sending emails
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
-EMAIL_HOST_USER = 'ToysWorldEg@gmail.com'
-EMAIL_HOST_PASSWORD = 'xxx-xxx'
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_USE_TLS = True
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

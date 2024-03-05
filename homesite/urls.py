@@ -21,5 +21,7 @@ urlpatterns = [
     path('training/', views.training, name='training'),
     path('erp/', views.erp, name='erp'),
     path('digital/', views.digital, name='digital'),
-    path('casestudy/', views.casestudy, name='casestudy')
+    path('casestudy/', views.casestudy, name='casestudy'),
+        path('404/', views.e404, name='e404'),
+
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

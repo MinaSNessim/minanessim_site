@@ -22,7 +22,7 @@ class ContactForm(forms.ModelForm):
             'name': forms.TextInput(attrs={'class': 'form-control', 'style': "borders:1px", 'id': "contact_name"}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'style': "borders:1px"}),
             'subject': forms.TextInput(attrs={'class': 'form-control', 'style': "borders:1px"}),
-            'message': forms.Textarea(attrs={'class': 'form-control', 'style': "borders:1px"}),
+            'message': forms.Textarea(attrs={'class': 'form-control', 'style': "borders:1px", 'rows': 3}),
         }
 
 

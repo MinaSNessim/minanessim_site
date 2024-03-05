@@ -2,266 +2,261 @@
 <!-- ======= Footer ======= -->
 <head></head>
 
-    <section id="contact" class="contact">
-      <div class='container'>
+{% if messages %}
+{% for message in messages %}
+{% if message.tags == 'subscription' %}
+<div class="alert alert-success">{{ message }}</div>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+
+<section id="contact" class="contact">
+    <div class='container'>
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>
-            Don't hesitate to get in touch!, whether you have questions, want to
-            collaborate, or are unsure how to benefit from our services.
-            Feel free to drop me a line using the form below, and I'll respond promptly, offering a complimentary
-            consultation.
-          </p>
+            <h2>Contact</h2>
+            <p>
+                Don't hesitate to get in touch!, whether you have questions, want to
+                collaborate, or are unsure how to benefit from our services.
+            </p>
         </div>
 
         <div class="row php-email-form">
-          <div class="col-md-3 text-center ">
-            <div class="contact-info">
-              <br/>
-              <div class="info-item">
-                <h2>You can Also:</h2>
-                <br/><br/>
-                <strong>Call On:</strong>
-                <br/>
-                <p>+971 58 +++++ <br> Mon-Fri: 9 AM - 6 PM (GST)</p>
-              </div>
-              <div class="info-item">
-                <strong>Chat On Whatsapp:</strong>
-                <br>
-                <a href="https://wa.me/97158" target="_blank" rel="noopener noreferrer"
-                   style="text-decoration: none; background-color: transparent;">
-                  <img src="{% static 'img/sm/wa.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
-                </a>
-              </div>
-              <div class="info-item">
-                <br>
-                <strong>Send Email:</strong>
-                <br>
-                <a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"
-                   style="text-decoration: none; background-color: transparent;">
-                  <img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
-                </a>
-              </div>
-              <div class="info-item">
-                <br>
-                <strong>Message on LinkedIn:</strong>
-                <br>
-                <a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"
-                   style="text-decoration: none; background-color: transparent;">
-                  <img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
-                </a>
-              </div>
+            <div class="col-md-3 text-center ">
+                <div class="contact-info">
+                    <br/>
+                    <div class="info-item">
+                        <h2>You can Also:</h2>
+                        <br/><br/>
+                        <!--           <strong>Call On:</strong> -->
+                        <br/>
+                        <p>+971 585235711 <br> Mon-Fri: 9 AM - 6 PM (GST)</p>
+                        <p><a href= "mailto:datasieger@gmail.com">Email</a></p>
+                        <p><a href= "https://www.linkedin.com/company/data-sieger">Linkedin</a></p>
+                        <p><a href= "https://wa.me/971585235711">Whatsapp</a></p>
+                    </div>
+                    <div class="info-item">
+                        <!--            <strong>Chat On Whatsapp:</strong> -->
+                        <br/>
+                        <a href="https://wa.me/97158" target="_blank" rel="noopener noreferrer"
+                           style="text-decoration: none; background-color: transparent;display: inline-block; margin-top: 10px;">
+                        </a>
+                    </div>
+                    <!--             <div class="info-item">
+                                <br>
+                                   <strong>Send Email:</strong>
+                                <br>
+                                <a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"
+                                   style="text-decoration: none; background-color: transparent;display: inline-block; margin-top: 10px;">
+                                  <img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 31px;">
+                                </a>
+                              </div>
+                              <div class="info-item">
+                                <br>-->
+                    <!--               <strong>Message on LinkedIn:</strong>
+                             <br>
+                             <a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"
+                                style="text-decoration: none; background-color: transparent;display: inline-block; margin-top: 10px;">
+                               <img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
+                             </a>
+                           </div> -->
+                </div>
             </div>
-          </div>
-          <div class="col-md-9">
-            <!-- Contact form -->
-            <form action="{% url 'contact_view' %}" method="post" role="form" class="php-email-form"
-                  name="contact_form">
-              {% csrf_token %}
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label>Your Name</label>
-                  {{ contact_form.name }}
-                </div>
-                <div class="form-group col-md-6">
-                  <label>Your Email</label>
-                  {{ contact_form.email }}
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Subject</label>
-                {{ contact_form.subject }}
-              </div>
-              <div class="row">
-                <div class="form-group">
-                  <label>Message</label>
-                  {{ contact_form.message }}
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center">
-                  <button type="submit">Get Free Consultation</button>
-                </div>
-              </div>
-            </form>
-          </div>
+            <div class="col-md-9">
+                <!-- Contact form -->
+                <form action="{% url 'contact_view' %}" method="post" role="form" class="php-email-form"
+                      name="contact_form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Your Name</label>
+                            {{ contact_form.name }}
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Your Email</label>
+                            {{ contact_form.email }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        {{ contact_form.subject }}
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <label>Message</label>
+                            {{ contact_form.message }}
+                        </div>
+                        <div class="my-3">
+                            <div class="loading">Loading</div>
+                            <div class="error-message"></div>
+                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit">Get Free Consultation</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-
-      </div>
-    </section>
-
-
-
+    </div>
+</section>
 
 <footer id="footer">
+
 <div class="footer-newsletter">
-	<div class="container">
-		<div class="row ">
-			<div class="col-lg-6 col-md-6 mb-4">
-					<h4>Subscribe to Newsletter</h4>
-					<p>Subscribe to get latest news and updates</p>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-6 col-md-6 mb-4">
+                <h4>Subscribe to Newsletter</h4>
+                <p>Subscribe to get latest news and updates</p>
 
-                    <form action="{% url 'handle_subscription' %}" method="post" class="container" name="subscribe_form">
-                        {% csrf_token %}
-                        <div class="input-group">
-                            {{ subscriber_form.email }}
-                            <div class="input-group-append">
-                                <button type="submit" class="btn btn-primary btn-block btn-radius-right"
-										style="border-top-right-radius: 15px; border-bottom-right-radius: 15px;
-										border-top-left-radius: 0; border-bottom-left-radius: 0;background: #47b2e4;
-										border: 0;">Subscribe</button>
-                            </div>
+                <form action="{% url 'handle_subscription' %}" method="post" class="container"
+                      name="subscribe_form">
+                    {% csrf_token %}
+                    <div class="input-group">
+                        {{ subscriber_form.email }}
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-primary btn-block btn-radius-right"
+                                    style="border-top-right-radius: 15px; border-bottom-right-radius: 15px;
+                                    border-top-left-radius: 0; border-bottom-left-radius: 0;background: #47b2e4;
+                                    border: 0;">Subscribe
+                            </button>
                         </div>
-                    </form>
+                    </div>
+                </form>
 
 
-				</div>
-			<div class="col-lg-4 col-md-6 footer-links">
-				<h3>Follow on Social Media</h3>
-				<div class="social-links mt-3">
-					<div class="row footer-links" >
-						<div class="col-lg-4">
-							<ul>
-								<li>
-									<a href="https://www.youtube.com/@minanessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-										<img src="{% static 'img/sm/youtube.png' %}" alt="YouTube" style="width: 40px; height: 40px;">
-									</a>
-								</li>
-								<li>
-									<a href="https://twitter.com/MinaMsnessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-										<img src="{% static 'img/sm/twitter.png' %}" alt="Twitter" style="width: 40px; height: 40px;">
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul>
-								<li>
-									<a href="https://github.com/MinaSNessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-										<img src="{% static 'img/sm/github.png' %}" alt="GitHub" style="width: 45px; height: 45px;">
-									</a>
-								</li>
-								<li>
-									<a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-										<img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-lg-4">
-							<ul>
-								<li>
-									<a href="https://www.upwork.com/freelancers/~010b5754c5b4ea1407" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-										<img src="{% static 'img/sm/upwork.png' %}" alt="Upwork" style="width: 40px; height: 40px;">
-									</a>
-								</li>
-								<li>
-									<a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-										<img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4 col-md-6 footer-links">
+                <h3>Follow on Social Media</h3>
+                <br/>
+                <div class="container" style="display: flex; justify-content: space-between">
+                    <a href="https://www.youtube.com/@minanessim" target="_blank" rel="noopener noreferrer"
+                       style="text-decoration: none; background-color: transparent;">
+                        <img class="sm_icon" src="{% static 'img/sm/youtube.png' %}" alt="YouTube"
+                             style="width: 50px; height: 50px;">
+                    </a>
+                    <a href="https://twitter.com/DataSieger" target="_blank" rel="noopener noreferrer"
+                       style="text-decoration: none; background-color: transparent;">
+                        <img class="sm_icon" src="{% static 'img/sm/twitter.png' %}" alt="Twitter"
+                             style="width: 50px; height: 50px;">
+                    </a>
+                    <a href="https://github.com/MinaSNessim" target="_blank" rel="noopener noreferrer"
+                       style="text-decoration: none; background-color: transparent;">
+                        <img class="sm_icon" src="{% static 'img/sm/github.png' %}" alt="GitHub"
+                             style="width: 50px; height: 50px;">
+                    </a>
+                    <a href="mailto:datasieger@gmail.com" target="_blank" rel="noopener noreferrer"
+                       style="text-decoration: none; background-color: transparent;">
+                        <img class="sm_icon" src="{% static 'img/sm/gmail.png' %}" alt="Gmail"
+                             style="width: 50px; height: 50px;">
+                    </a>
+                    <a href="https://www.linkedin.com/company/data-sieger" target="_blank" rel="noopener noreferrer"
+                       style="text-decoration: none; background-color: transparent;">
+                        <img class="sm_icon" src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn"
+                             style="width: 50px; height: 50px;">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 </div>
 
 <!--
 <div class="footer-top">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-4 col-md-6 footer-contact">
-				<h3>Mina Nessim</h3>
-				<p>
-				  <strong>Location:</strong>  Dubai, UAE <br>
-				  <strong>Email:</strong> info@example.com<br>
-				</p>
-			  </div>
-		<div class="col-lg-4 col-md-6 footer-links">
-				<h4>Useful Links</h4>
-				<ul>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-				</ul>
-			  </div>
-			<div class="col-lg-4 col-md-6 footer-links">
-				<h4>Our Services</h4>
-				<ul>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-				  <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 footer-contact">
+                <h3>Mina Nessim</h3>
+                <p>
+                  <strong>Location:</strong>  Dubai, UAE <br>
+                  <strong>Email:</strong> info@example.com<br>
+                </p>
+              </div>
+        <div class="col-lg-4 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+            <div class="col-lg-4 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
 
-				</ul>
-			  </div>
-			<div class="col-lg-4 col-md-6 footer-links">
-						<h3>Follow on Social Media</h3>
-						<div class="social-links mt-3">
-							<div class="row">
-								<div class="col-lg-4">
-									<ul>
-										<li>
-											<a href="https://www.youtube.com/@minanessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-												<img src="{% static 'img/sm/youtube.png' %}" alt="YouTube" style="width: 40px; height: 40px;">
-											</a>
-										</li>
-										<li>
-											<a href="https://twitter.com/MinaMsnessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-												<img src="{% static 'img/sm/twitter.png' %}" alt="Twitter" style="width: 40px; height: 40px;">
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-lg-4">
-									<ul>
-										<li>
-											<a href="https://github.com/MinaSNessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-												<img src="{% static 'img/sm/github.png' %}" alt="GitHub" style="width: 45px; height: 45px;">
-											</a>
-										</li>
-										<li>
-											<a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-												<img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
-											</a>
-										</li>
-									</ul>
-								</div>
-								<div class="col-lg-4">
-									<ul>
-										<li>
-											<a href="https://www.upwork.com/freelancers/~010b5754c5b4ea1407" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-												<img src="{% static 'img/sm/upwork.png' %}" alt="Upwork" style="width: 40px; height: 40px;">
-											</a>
-										</li>
-										<li>
-											<a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
-												<img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-			</div>
+                </ul>
+              </div>
+            <div class="col-lg-4 col-md-6 footer-links">
+                        <h3>Follow on Social Media</h3>
+                        <div class="social-links mt-3">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.youtube.com/@minanessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+                                                <img src="{% static 'img/sm/youtube.png' %}" alt="YouTube" style="width: 40px; height: 40px;">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/MinaMsnessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+                                                <img src="{% static 'img/sm/twitter.png' %}" alt="Twitter" style="width: 40px; height: 40px;">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul>
+                                        <li>
+                                            <a href="https://github.com/MinaSNessim" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+                                                <img src="{% static 'img/sm/github.png' %}" alt="GitHub" style="width: 45px; height: 45px;">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto:mina.s.nessim@gmail.com" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+                                                <img src="{% static 'img/sm/gmail.png' %}" alt="Gmail" style="width: 40px; height: 40px;">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.upwork.com/freelancers/~010b5754c5b4ea1407" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+                                                <img src="{% static 'img/sm/upwork.png' %}" alt="Upwork" style="width: 40px; height: 40px;">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/in/mina-nessim/" target="_blank" rel="noopener noreferrer"  style="text-decoration: none; background-color: transparent;">
+                                                <img src="{% static 'img/sm/linkedin.png' %}" alt="LinkedIn" style="width: 40px; height: 40px;">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+            </div>
 
-		</div>
-	</div>
+        </div>
+    </div>
 </div>
 -->
-<div class="container clearfix" style = "  color: #fff">
+<div class="container clearfix" style="  color: #fff">
     <div class="copyright">
         <div class="row mt-2">
             <div class="col-12 d-flex justify-content-center align-items-center">
                 <p class="text-center">
-                    Copyright &copy; 2022- <script>document.write(new Date().getFullYear());</script>. All Rights Reserved.&mdash; Mina Nessim,
+                    Copyright &copy; 2022-
+                    <script>document.write(new Date().getFullYear());</script>
+                    . All Rights Reserved.&mdash; Mina Nessim,
                     <a href="https://mit-license.org/">MIT</a>,
                     <a href="https://bootstrapmade.com/">BootstrapMade</a>
                 </p>

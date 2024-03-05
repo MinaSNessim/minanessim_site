@@ -11,7 +11,7 @@
 <body>
 
     {% block content%}
-    <section id="hero" class="d-flex align-items-center" style="height: 150px; "></section>
+    <section id="hero" class="d-flex align-items-center" style="height: 170px; "></section>
 
     <section id="portfolio" class="portfolio section-bg">
       <div class="container" data-aos="fade-up">
@@ -36,8 +36,8 @@
                     <h4 >{{ port.title }}</h4>
                     <h4></h4>
                     <p> {{ port.insight }} </p>
-                    <a href="{{ port.photo.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
-                       title="{{ port.insight }}"><i class="bx bx-plus"></i></a>
+             <!--       <a href="{{ port.photo.url }}" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link"
+                       title="{{ port.insight }}"><i class="bx bx-plus"></i></a> -->
                     <a href="/portfolio/{{port.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                   </div>
               </div>

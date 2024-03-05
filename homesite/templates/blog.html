@@ -10,7 +10,7 @@
 
 <body>
     {% block content %}
-        <section id="hero" class="d-flex align-items-center" style="height: 150px; "></section>
+        <section id="hero" class="d-flex align-items-center" style="height: 170px; "></section>
 
         <section id="blog" class="blog section-bg">
           <div class="container" data-aos="fade-up">
@@ -35,8 +35,8 @@
                         <h4 >{{ blog.title }}</h4>
                         <h4></h4>
                         <p> {{ blog.insight }} </p>
-                        <a href="{{ blog.photo.url }}" data-gallery="blogGallery" class="blog-lightbox preview-link"
-                           title="{{ blog.insight }}"><i class="bx bx-plus"></i></a>
+                <!--        <a href="{{ blog.photo.url }}" data-gallery="blogGallery" class="blog-lightbox preview-link"
+                           title="{{ blog.insight }}"><i class="bx bx-plus"></i></a> -->
                         <a href="/blog/{{blog.id}}" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                       </div>
                   </div>
