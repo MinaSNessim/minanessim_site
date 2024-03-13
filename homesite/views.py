@@ -6,7 +6,7 @@ from .forms import SubscriberForm, ContactForm, PortfolioForm
 from django.core.mail import send_mail
 import os
 from datetime import datetime
-from graphviz import Digraph
+
 
 
 # Create your views here.
