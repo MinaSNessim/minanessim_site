@@ -76,7 +76,7 @@ def contact_view(request):
             message_message = request.POST['message']
 
             contact_form.save()
-            send_mail(message_subject, message_message, message_email, ['mina.s.nessim@gmail.com'])
+            send_mail(message_subject, message_message, message_email, ['mina.nessim@datasieger.com'])
             messages.success(request, 'Your message has been sent. Thank you!')
         else:
             for field, errors in contact_form.errors.items():
