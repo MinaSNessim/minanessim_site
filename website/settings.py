@@ -38,13 +38,11 @@ SECURE_SSL_REDIRECT = True
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-ALLOWED_HOSTS = ['msnessim.pythonanywhere.com']
+ALLOWED_HOSTS = ['www.datasieger.com']
 
 STATIC_ROOT = '/home/msnessim/minanessim_site/static/'
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Application definition
 
@@ -55,10 +53,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'homesite',
     'ckeditor',
     'ckeditor_uploader',
+    'robots',
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
